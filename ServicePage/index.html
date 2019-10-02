@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    
+    <title>ServisePage</title>
+
+</head>
+<body onload="resetSliders(['slider_intro_item']); initialize_counter('counter')">
+
+<svg style="display: none;">
+  <symbol id = "facebook-top" viewBox="0 0 612 612">
+      <g>
+          <path d="M612,306C612,137.004,474.995,0,306,0C137.004,0,0,137.004,0,306c0,168.995,137.004,306,306,306
+            C474.995,612,612,474.995,612,306z M27.818,306C27.818,152.36,152.36,27.818,306,27.818S584.182,152.36,584.182,306
+            S459.64,584.182,306,584.182S27.818,459.64,27.818,306z"/>
+          <path d="M317.739,482.617V306h58.279l9.208-58.529h-67.487v-29.348c0-15.272,5.007-29.849,26.928-29.849h43.813v-58.418h-62.201
+            c-52.298,0-66.569,34.438-66.569,82.175v35.413h-35.885V306h35.885v176.617H317.739L317.739,482.617z"/>
+        </g>
+  </symbol>
+
+  <symbol id = "google-top" viewBox="0 0 235 235">
+    <g>
+      <path d="M117.5,0C52.71,0,0,52.71,0,117.5S52.71,235,117.5,235S235,182.29,235,117.5S182.29,0,117.5,0z M117.5,220
+	C60.981,220,15,174.019,15,117.5S60.981,15,117.5,15S220,60.981,220,117.5S174.019,220,117.5,220z M95.064,110h48.026v7.5
+	c0,26.481-21.544,48.025-48.026,48.025c-26.482,0-48.025-21.544-48.025-48.025s21.544-48.025,48.025-48.025
+	c10.684,0,20.806,3.439,29.271,9.946l-9.142,11.893c-5.82-4.474-12.781-6.839-20.129-6.839c-18.211,0-33.025,14.815-33.025,33.025
+	s14.815,33.025,33.025,33.025c15.632,0,28.762-10.916,32.167-25.525H95.064V110z M184.755,110h13.075v15h-13.075v13.076h-15V125
+  h-13.069v-15h13.069V96.924h15V110z"/>
+    </g>
+  </symbol>
+
+  <symbol id = "twitter-top" viewBox="0 0 612 612">
+      <g>
+          <path d="M437.219,245.162c0-3.088-0.056-6.148-0.195-9.18c13.214-9.848,24.675-22.171,33.744-36.275
+            c-12.129,5.453-25.148,9.097-38.835,10.626c13.965-8.596,24.675-22.338,29.738-38.834c-13.075,7.928-27.54,13.603-42.924,16.552
+            c-12.323-14.021-29.904-22.95-49.35-23.284c-37.332-0.612-67.598,30.934-67.598,70.463c0,5.619,0.584,11.072,1.752,16.329
+            c-56.22-3.616-106.042-32.881-139.369-77c-5.814,10.571-9.152,22.922-9.152,36.164c0,25.037,11.934,47.291,30.071,60.421
+            c-11.099-0.5-21.503-3.866-30.627-9.375c0,0.306,0,0.612,0,0.918c0,34.996,23.312,64.316,54.245,71.159
+            c-5.675,1.613-11.656,2.448-17.804,2.421c-4.367-0.028-8.596-0.501-12.713-1.392c8.596,28.681,33.577,49.628,63.147,50.323
+            c-23.145,19.194-52.298,30.655-83.955,30.572c-5.453,0-10.849-0.361-16.135-1.029c29.933,20.53,65.456,32.491,103.65,32.491
+            C369.23,447.261,437.219,339.048,437.219,245.162z"/>
+          <path d="M612,306C612,137.004,474.995,0,306,0C137.004,0,0,137.004,0,306c0,168.995,137.004,306,306,306
+            C474.995,612,612,474.995,612,306z M27.818,306C27.818,152.36,152.36,27.818,306,27.818S584.182,152.36,584.182,306
+            S459.64,584.182,306,584.182S27.818,459.64,27.818,306z"/>
+        </g>
+  </symbol>
+
+  <symbol id = "google" viewBox="0 0 24 24">
+      <g><path d="m12 24c6.624 0 12-5.376 12-12s-5.376-12-12-12-12 5.376-12 12 5.376 12 12 12zm4.283-12.857h1.718v-1.717h1.718v1.718h1.703v1.718h-1.703v1.718h-1.718v-1.718h-1.718zm-7.704-5.144c1.514 0 2.908.533 4.017 1.563l-1.626 1.578c-.639-.625-1.514-.924-2.391-.924-2.076 0-3.736 1.718-3.736 3.779s1.655 3.779 3.736 3.779c1.577 0 3.14-.924 3.392-2.579h-3.392v-2.061h5.657c.063.329.092.658.092 1.001 0 3.426-2.299 5.864-5.749 5.864v.001c-3.329 0-6.001-2.686-6.001-6.001s2.672-6 6.001-6z"/></g>
+  </symbol>
+
+  <symbol id = "behance" viewBox="0 0 97.75 97.75">
+      <g>
+          <path d="M39.337,38.729c0-4.611-3.137-4.611-3.137-4.611h-1.661H23.294v9.894H35.4C37.492,44.011,39.337,43.342,39.337,38.729z"/>
+          <path d="M36.201,50.846H23.294v11.85h12.311c1.852-0.053,5.27-0.633,5.27-5.76C40.875,50.784,36.201,50.846,36.201,50.846z"/>
+          <path d="M69.243,44.011c-6.849,0-7.804,6.835-7.804,6.835h14.565C76.005,50.846,76.092,44.011,69.243,44.011z"/>
+          <path d="M48.875,0C21.882,0,0,21.883,0,48.875S21.882,97.75,48.875,97.75S97.75,75.867,97.75,48.875S75.868,0,48.875,0z
+             M59.531,28.848h18.294v5.46H59.531V28.848z M50.285,57.486c0,13.533-14.084,13.088-14.084,13.088H23.294h-0.379h-9.787V26.236
+            h9.787h0.379H36.2c7.012,0,12.547,3.871,12.547,11.805c0,7.935-6.766,8.438-6.766,8.438C50.9,46.479,50.285,57.486,50.285,57.486z
+             M69.33,64.479c7.37,0,7.109-4.77,7.109-4.77h7.803c0,12.659-15.172,11.792-15.172,11.792c-18.207,0-17.036-16.95-17.036-16.95
+            S52.02,37.517,69.068,37.517c17.947,0,15.434,19.245,15.434,19.245H61.527C61.527,65.001,69.33,64.479,69.33,64.479z"/>
+        </g>
+  </symbol>
+
+  <symbol id = "dribble" viewBox="0 0 49.652 49.652">
+      <g>
+          <path d="M24.089,20.454c-2.305-4.097-4.769-7.435-4.945-7.674c-3.714,1.755-6.485,5.176-7.351,9.301
+            C12.144,22.087,17.694,22.153,24.089,20.454z"/>
+          <path d="M21.636,11.894c-0.014,0.006-0.028,0.009-0.042,0.012c0.025-0.005,0.04-0.009,0.04-0.009L21.636,11.894z"/>
+          <path d="M33.622,14.831c-2.347-2.066-5.423-3.322-8.796-3.322c-1.082,0-2.132,0.132-3.139,0.375
+            c0.2,0.264,2.701,3.587,4.979,7.771C31.692,17.769,33.59,14.883,33.622,14.831z"/>
+          <path d="M27.094,27.006c-7.864,2.74-10.427,8.267-10.45,8.315c2.258,1.764,5.095,2.825,8.182,2.825
+            c1.846,0,3.602-0.378,5.2-1.058c-0.197-1.164-0.973-5.242-2.846-10.11C27.151,26.986,27.122,26.995,27.094,27.006z"/>
+          <path d="M25.748,24.93c0.174-0.057,0.35-0.11,0.523-0.159c-0.332-0.759-0.697-1.517-1.08-2.265
+            c-6.856,2.053-13.438,1.902-13.672,1.898c-0.005,0.14-0.011,0.278-0.011,0.42c0,3.422,1.291,6.541,3.411,8.901l-0.005-0.008
+            C14.915,33.721,18.56,27.253,25.748,24.93z"/>
+          <path d="M24.826,0C11.137,0,0,11.137,0,24.826c0,13.688,11.137,24.826,24.826,24.826c13.688,0,24.826-11.138,24.826-24.826
+            C49.652,11.137,38.516,0,24.826,0z M40.104,27.969c-0.204,1.002-0.512,1.987-0.908,2.931c-0.393,0.924-0.875,1.815-1.438,2.649
+            c-0.558,0.824-1.199,1.602-1.901,2.308c-0.705,0.704-1.48,1.344-2.308,1.901c-0.834,0.563-1.727,1.047-2.649,1.438
+            c-0.941,0.397-1.929,0.704-2.931,0.91c-1.026,0.211-2.084,0.315-3.141,0.315c-1.058,0-2.113-0.104-3.141-0.315
+            c-1.002-0.206-1.989-0.513-2.931-0.91c-0.925-0.392-1.816-0.874-2.65-1.438c-0.825-0.56-1.602-1.197-2.306-1.901
+            c-0.706-0.706-1.346-1.48-1.903-2.308c-0.563-0.834-1.047-1.728-1.438-2.649c-0.397-0.941-0.705-1.929-0.91-2.931
+            c-0.21-1.025-0.316-2.084-0.316-3.144c0-1.057,0.106-2.113,0.316-3.139c0.205-1.002,0.512-1.988,0.911-2.932
+            c0.391-0.925,0.874-1.815,1.436-2.647c0.559-0.825,1.198-1.603,1.903-2.307c0.705-0.706,1.48-1.346,2.307-1.904
+            c0.834-0.563,1.726-1.046,2.649-1.438c0.942-0.396,1.93-0.705,2.931-0.908c1.028-0.211,2.084-0.318,3.141-0.318
+            c1.058,0,2.114,0.107,3.142,0.318c1.002,0.203,1.987,0.511,2.931,0.908c0.926,0.392,1.815,0.873,2.649,1.438
+            c0.824,0.559,1.603,1.199,2.308,1.904c0.704,0.705,1.345,1.481,1.901,2.307c0.563,0.833,1.047,1.724,1.438,2.647
+            c0.396,0.943,0.705,1.93,0.909,2.932c0.211,1.025,0.315,2.082,0.315,3.139C40.42,25.885,40.314,26.94,40.104,27.969z"/>
+          <path d="M29.676,26.36c1.748,4.8,2.457,8.709,2.592,9.514c2.992-2.021,5.115-5.222,5.709-8.933
+            C37.701,26.85,33.975,25.674,29.676,26.36z"/>
+          <path d="M27.689,21.637c0.312,0.635,0.608,1.28,0.887,1.932c0.1,0.23,0.192,0.46,0.287,0.688
+            c4.576-0.574,9.084,0.396,9.274,0.437c-0.028-3.161-1.16-6.059-3.026-8.326C35.088,16.403,32.951,19.491,27.689,21.637z"/>
+        </g>
+  </symbol>
+
+  <symbol id = "facebook" viewBox="0 0 167.657 167.657">
+      <g>
+          <path d="M83.829,0.349C37.532,0.349,0,37.881,0,84.178c0,41.523,30.222,75.911,69.848,82.57v-65.081H49.626
+            v-23.42h20.222V60.978c0-20.037,12.238-30.956,30.115-30.956c8.562,0,15.92,0.638,18.056,0.919v20.944l-12.399,0.006
+            c-9.72,0-11.594,4.618-11.594,11.397v14.947h23.193l-3.025,23.42H94.026v65.653c41.476-5.048,73.631-40.312,73.631-83.154
+            C167.657,37.881,130.125,0.349,83.829,0.349z"/>
+        </g>
+  </symbol>
+
+  <symbol id = "twitter" viewBox="0 0 512 512">
+      <g><path d="m256 0c-141.363281 0-256 114.636719-256 256s114.636719 256 256 256 256-114.636719 256-256-114.636719-256-256-256zm116.886719 199.601562c.113281 2.519532.167969 5.050782.167969 7.59375 0 77.644532-59.101563 167.179688-167.183594 167.183594h.003906-.003906c-33.183594 0-64.0625-9.726562-90.066406-26.394531 4.597656.542969 9.277343.8125 14.015624.8125 27.53125 0 52.867188-9.390625 72.980469-25.152344-25.722656-.476562-47.410156-17.464843-54.894531-40.8125 3.582031.6875 7.265625 1.0625 11.042969 1.0625 5.363281 0 10.558593-.722656 15.496093-2.070312-26.886718-5.382813-47.140624-29.144531-47.140624-57.597657 0-.265624 0-.503906.007812-.75 7.917969 4.402344 16.972656 7.050782 26.613281 7.347657-15.777343-10.527344-26.148437-28.523438-26.148437-48.910157 0-10.765624 2.910156-20.851562 7.957031-29.535156 28.976563 35.554688 72.28125 58.9375 121.117187 61.394532-1.007812-4.304688-1.527343-8.789063-1.527343-13.398438 0-32.4375 26.316406-58.753906 58.765625-58.753906 16.902344 0 32.167968 7.144531 42.890625 18.566406 13.386719-2.640625 25.957031-7.53125 37.3125-14.261719-4.394531 13.714844-13.707031 25.222657-25.839844 32.5 11.886719-1.421875 23.214844-4.574219 33.742187-9.253906-7.863281 11.785156-17.835937 22.136719-29.308593 30.429687zm0 0"/></g>
+  </symbol>
+
+  <symbol id = "instagram" viewBox="0 0 512 512">
+      <path d="m305 256c0 27.0625-21.9375 49-49 49s-49-21.9375-49-49 21.9375-49 49-49 49 21.9375 49 49zm0 0"/><path d="m370.59375 169.304688c-2.355469-6.382813-6.113281-12.160157-10.996094-16.902344-4.742187-4.882813-10.515625-8.640625-16.902344-10.996094-5.179687-2.011719-12.960937-4.40625-27.292968-5.058594-15.503906-.707031-20.152344-.859375-59.402344-.859375-39.253906 0-43.902344.148438-59.402344.855469-14.332031.65625-22.117187 3.050781-27.292968 5.0625-6.386719 2.355469-12.164063 6.113281-16.902344 10.996094-4.882813 4.742187-8.640625 10.515625-11 16.902344-2.011719 5.179687-4.40625 12.964843-5.058594 27.296874-.707031 15.5-.859375 20.148438-.859375 59.402344 0 39.25.152344 43.898438.859375 59.402344.652344 14.332031 3.046875 22.113281 5.058594 27.292969 2.359375 6.386719 6.113281 12.160156 10.996094 16.902343 4.742187 4.882813 10.515624 8.640626 16.902343 10.996094 5.179688 2.015625 12.964844 4.410156 27.296875 5.0625 15.5.707032 20.144532.855469 59.398438.855469 39.257812 0 43.90625-.148437 59.402344-.855469 14.332031-.652344 22.117187-3.046875 27.296874-5.0625 12.820313-4.945312 22.953126-15.078125 27.898438-27.898437 2.011719-5.179688 4.40625-12.960938 5.0625-27.292969.707031-15.503906.855469-20.152344.855469-59.402344 0-39.253906-.148438-43.902344-.855469-59.402344-.652344-14.332031-3.046875-22.117187-5.0625-27.296874zm-114.59375 162.179687c-41.691406 0-75.488281-33.792969-75.488281-75.484375s33.796875-75.484375 75.488281-75.484375c41.6875 0 75.484375 33.792969 75.484375 75.484375s-33.796875 75.484375-75.484375 75.484375zm78.46875-136.3125c-9.742188 0-17.640625-7.898437-17.640625-17.640625s7.898437-17.640625 17.640625-17.640625 17.640625 7.898437 17.640625 17.640625c-.003906 9.742188-7.898437 17.640625-17.640625 17.640625zm0 0"/><path d="m256 0c-141.363281 0-256 114.636719-256 256s114.636719 256 256 256 256-114.636719 256-256-114.636719-256-256-256zm146.113281 316.605469c-.710937 15.648437-3.199219 26.332031-6.832031 35.683593-7.636719 19.746094-23.246094 35.355469-42.992188 42.992188-9.347656 3.632812-20.035156 6.117188-35.679687 6.832031-15.675781.714844-20.683594.886719-60.605469.886719-39.925781 0-44.929687-.171875-60.609375-.886719-15.644531-.714843-26.332031-3.199219-35.679687-6.832031-9.8125-3.691406-18.695313-9.476562-26.039063-16.957031-7.476562-7.339844-13.261719-16.226563-16.953125-26.035157-3.632812-9.347656-6.121094-20.035156-6.832031-35.679687-.722656-15.679687-.890625-20.6875-.890625-60.609375s.167969-44.929688.886719-60.605469c.710937-15.648437 3.195312-26.332031 6.828125-35.683593 3.691406-9.808594 9.480468-18.695313 16.960937-26.035157 7.339844-7.480469 16.226563-13.265625 26.035157-16.957031 9.351562-3.632812 20.035156-6.117188 35.683593-6.832031 15.675781-.714844 20.683594-.886719 60.605469-.886719s44.929688.171875 60.605469.890625c15.648437.710937 26.332031 3.195313 35.683593 6.824219 9.808594 3.691406 18.695313 9.480468 26.039063 16.960937 7.476563 7.34375 13.265625 16.226563 16.953125 26.035157 3.636719 9.351562 6.121094 20.035156 6.835938 35.683593.714843 15.675781.882812 20.683594.882812 60.605469s-.167969 44.929688-.886719 60.605469zm0 0"/>
+  </symbol>
+
+</svg>
+
+<header class = "header">
+    <div class = "container">
+        <div class = "header__inner">
+            <div class="header_logo">
+              <div class="LO">LO</div>
+              <div class="GO">GO</div>
+            </div>
+            <div class="navigation">
+                <a class = "navlink"href="#">Home</a>
+                <a class = "navlink"href="#">About</a>
+                <a class = "navlink"href="#">Services</a>
+                <a class = "navlink"href="#">Portfolio</a>
+                <a class = "navlink"href="#">Shop</a>
+                <a class = "navlink"href="#">Contact</a>
+                <a class = "navlink"href="#">Pages</a>
+            </div>
+            <div class = "socials">
+              <a class="social_item" href="sociallink">
+                <svg class="social_icon">
+                  <use xlink:href="#facebook-top"></use>
+                </svg>
+              </a>
+              <a class="social_item" href="sociallink">
+                  <svg class="social_icon">
+                    <use xlink:href="#twitter-top"></use>
+                </svg>
+              </a>
+              <a class="social_item" href="sociallink">
+                  <svg class="social_icon">
+                    <use xlink:href="#google-top"></use>
+                </svg>
+              </a> 
+              
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="intro">
+  <div class="container">
+    <div class="intro_inner">
+      <div class="top_slider_control">
+        <a class="prev" onclick="plusSlide(-1, 'slider_intro_item')"><img src="img/left_arrow.png" alt=""></a>
+        <a class="next" onclick="plusSlide(1, 'slider_intro_item')"><img src="img/right_arrow.png" alt=""></a>
+      </div>
+      <div class="titleborder">
+        <div class="slider_intro_container">
+          <div class="slider_intro_item fade">
+            <h1 class="intro_title">The best services</h1>
+            <h2 class="intro_text">We provide the best services in the world We provide the best services in the world We provide the best services in the world</h2>
+          </div>
+          <div class="slider_intro_item fade">
+              <h1 class="intro_title">Other services</h1>
+              <h2 class="intro_text">We provide the best services in the world We provide the best services in the world We provide the best services in the world</h2>
+          </div>
+          <div class="slider_intro_item fade">
+              <h1 class="intro_title">Third services</h1>
+              <h2 class="intro_text">We provide something else</h2>
+          </div>
+        </div>
+        <a class="intro_button" href="#">Hire us</a>
+      </div>
+  </div>
+  </div>
+</div>
+
+<div class="about">
+  <div class="container">
+    <div class="about_inner">
+      <div class="about_left">
+        <img class="about_img" src="img/write.png" alt="">
+      </div>
+          
+      <div class="about_right">
+        <h1 class="about_title">A little about us</h1>
+        <div class="about_content">
+            We are  a company based in india with the motto “Digitalally Designed India”. We are  a company based in india with the motto “Digitalally  Designed India”. We are  a company based in india
+            with the motto “Digitalally Designed India”.
+            
+            We are  a company based in india with the motto “Digitalally Designed India”. We are  a company based in india with the motto “Digitalally Designed India”.  We are  a company based in India with the motto “Digitalally Designed India”. We are a 
+            company based in india with the motto “Digitalally Designed India”.
+        </div>
+        <a class="about_button" href="#">Read more details</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="services">
+
+  <div class="our_services">
+      <h1 class="our_services_text">Our Services</h1>
+      <img class="our_services_img" src="img/our services.png" alt="">
+  </div>
+  <div class="container">
+    <div class="services_inner_container">
+      <div class="services_slider_control">
+          <a class="left_service_button" onclick="move_services_right()"><img src="img/left_arrow3.png" alt=""></a>
+          <a class="right_service_button" onclick="move_services_left()"><img src="img/right_arrow3.png" alt=""></a>
+      </div>
+      <div class="services_inner" id="services_inner">
+        <div class="services_item">
+          <img class="services_img" src="img/Web_Dev.png" alt="">
+          <h1 class="services_titel">Web development</h1>
+          <h2 class="services_text">We provide the best world class web development service We provide the best world class web development service</h2>
+          <a class="services_button" href="#">More details</a>
+        </div>
+        <div class="services_item">
+            <img class="services_img" src="img/Web_Dev.png" alt="">
+            <h1 class="services_titel">Web development</h1>
+            <h2 class="services_text">We provide the best world class web development service We provide the best world class web development service</h2>
+            <a class="services_button" href="#">More details</a>
+        </div>
+        <div class="services_item">
+            <img class="services_img" src="img/Web_Dev.png" alt="">
+            <h1 class="services_titel">Web development</h1>
+            <h2 class="services_text">We provide the best world class web development service We provide the best world class web development service</h2>
+            <a class="services_button" href="#">More details</a>
+        </div>
+        <div class="services_item">
+            <img class="services_img" src="img/Web_Dev.png" alt="">
+            <h1 class="services_titel">Web development</h1>
+            <h2 class="services_text">Some other text We provide the best world class web development service</h2>
+            <a class="services_button" href="#">More details</a>
+        </div>
+        <div class="services_item">
+          <img class="services_img" src="img/Web_Dev.png" alt="">
+          <h1 class="services_titel">+++Web dev++++</h1>
+          <h2 class="services_text">Some other text We provide the best world class web development service</h2>
+          <a class="services_button" href="#">More details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="feedback">
+  <div class="feedback_title">
+    <h1 class="feedback_title_text">feedback</h1>
+    <img class="our_services_img" src="img/our services.png" alt="">
+  </div>
+
+  <div class="container">
+
+   <div class="feedback_bottom">  
+    <div class="feedback_left">
+      <div class="feedback_slider_container">
+        <div class="feedback_slider" id="feedback_slider">
+          <div class="feedback_slider_item">It was always a pleasure doing bussiness with them. I love the quality of work.</div>
+          <div class="feedback_slider_item">I love the quality of work.</div>
+          <div class="feedback_slider_item">Some text.</div>
+        </div>
+      </div>
+      <div class="feedback_slider_control">
+        <a class="left" onclick="move_slider_right(); decrease_counter()"><img src="img/left_arrow2.png" alt=""></a>
+        <div class="feedback_counter" id="counter">
+          1/10
+        </div>
+        <a class="right" onclick="move_slider_left(); increase_counter()"><img src="img/right_arrow2.png" alt=""></a>
+      </div>
+    </div>
+
+    <div class="feedback_items">
+      <div class="feedback_item">
+        <img class="feedback_foto" src="img/feedback/model-1.png" alt="">
+        <div class="feedback_text">
+          <div class="feedback_date">01</div>
+          <div class="feedback_name">Imran Khan<br/>CEO, Vesso</div>
+        </div>
+      </div>
+
+      <div class="feedback_item">
+          <img class="feedback_foto" src="img/feedback/model-2.png" alt="">
+          <div class="feedback_text">
+            <div class="feedback_date">01</div>
+            <div class="feedback_name">Imran Khan<br/>CEO, Vesso</div>
+          </div>
+      </div>
+
+      <div class="feedback_item">
+          <img class="feedback_foto" src="img/feedback/model-3.png" alt="">
+          <div class="feedback_text">
+            <div class="feedback_date">01</div>
+            <div class="feedback_name">Imran Khan<br/>CEO, Vesso</div>
+          </div>
+      </div>
+
+    </div>
+   </div>
+  </div>
+</div>
+
+<div class="clients">
+  <div class="clients_title">
+    <h1 class="clients_text">Clients</h1>
+    <img class="our_services_img" src="img/clients.png" alt="">
+  </div>
+  <div class="container">
+
+    <div class="client_logos">
+      <div class="client_logo_item">
+          <img class="client_logo_img" src="img/clients/Adobe.png" alt="">
+      </div>
+      <div class="client_logo_item">
+          <img class="client_logo_img" src="img/clients/hcl.png" alt="">
+      </div>
+      <div class="client_logo_item">
+          <img class="client_logo_img" src="img/clients/infosys.png" alt="">
+      </div>
+      <div class="client_logo_item">
+          <img class="client_logo_img" src="img/clients/invision.png" alt="">
+      </div>
+      <div class="client_logo_item">
+          <img class="client_logo_img" src="img/clients/cisco.png" alt="">
+      </div>
+      <div class="client_logo_item">
+          <img class="client_logo_img" src="img/clients/be.png" alt="">
+      </div>
+      <div class="client_logo_item">
+          <img class="client_logo_img" src="img/clients/Canva.png" alt="">
+      </div>
+      <div class="client_logo_item">
+          <img class="client_logo_img" src="img/clients/instagram.png" alt="">
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="quote">
+  <div class="container">
+    <div class="quote_inner">
+      <div class="quote_text">
+        <h1 class="quote_title">Any Queries | Get a quote</h1>
+        <h3 class="quote_description">If you have any questions or queries regarding our service or pricing don’t worry. <br>
+            Our experts will call you.</h3>
+      </div>
+
+      <div class="quote_subscribe">
+        
+        <div class="subscribe">
+          <input class="input_form" type="your_name" value="Your name" onfocus="if (value == 'Your name') {value = ''}" onblur="if (value == '') {value = 'Your name'}">
+          <input class="input_form" type="your_number" value="Your number" onfocus="if (value == 'Your number') {value = ''}" onblur="if (value == '') {value = 'Your number'}">
+          <a class="get_call" href="#">Get a call</a>
+        </div>
+    
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="container">
+    <div class="footer_inner">
+      <div class="content">
+        <div class="content_item">
+          <h1 class="content_title">Product <div class="dash"></div></h1>
+          <a class="content_item_link" href="#">Cost & Governance</a>
+          <a class="content_item_link" href="#">Security & Complaince</a>
+          <a class="content_item_link" href="#">Product N</a>
+          <a class="content_item_link" href="#">Pricing & plans</a>
+        </div>
+
+        <div class="content_item">
+            <h1 class="content_title">LEARN <div class="dash"></div></h1>
+            <a class="content_item_link" href="#">Articles</a>
+            <a class="content_item_link" href="#">Register a demo</a>
+            <a class="content_item_link" href="#">Webinars</a>
+            <a class="content_item_link" href="#">FAQs</a>
+        </div>
+
+        <div class="content_item">
+            <h1 class="content_title">company <div class="dash"></div></h1>
+            <a class="content_item_link" href="#">About</a>
+            <a class="content_item_link" href="#">Careers</a>
+            <a class="content_item_link" href="#">Partners</a>
+            <a class="content_item_link" href="#">Contact</a>
+        </div>
+
+      </div>
+
+      <div class="social">
+        <div class="mail_subscribe">
+            <input class="input_mail" type="your_mail" value="Your email" onfocus="if (value == 'Your email') {value = ''}" onblur="if (value == '') {value = 'Your email'}">
+            <a class="subscribe_field" href="#">Subscribe</a>
+        </div>
+        <div class="socials_footer">
+            <a class="social_item_footer" href="sociallink">
+                <svg class="social_icon_footer">
+                  <use xlink:href="#facebook"></use>
+                </svg>
+            </a>
+            <a class="social_item_footer" href="sociallink">
+                <svg class="social_icon_footer">
+                  <use xlink:href="#twitter"></use>
+                </svg>
+            </a>
+            <a class="social_item_footer" href="sociallink">
+                <svg class="social_icon_footer">
+                  <use xlink:href="#google"></use>
+                </svg>
+            </a>
+            <a class="social_item_footer" href="sociallink">
+                <svg class="social_icon_footer">
+                  <use xlink:href="#dribble"></use>
+                </svg>
+            </a>
+            <a class="social_item_footer" href="sociallink">
+                <svg class="social_icon_footer">
+                  <use xlink:href="#behance"></use>
+                </svg>
+            </a>
+            <a class="social_item_footer" href="sociallink">
+                <svg class="social_icon_footer">
+                  <use xlink:href="#instagram"></use>
+                </svg>
+            </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- javascript ======================= -->
+
+<script src="js/app.js"></script>
+
+
+</body>
+</html>
