@@ -1,3 +1,3 @@
 # Мои макеты
 
-[ServicePage] (zenker-91.github.io/ServicePage "Макет ServicePage")
+[ServicePage] (https://zenker-91.github.io/ServicePage "Макет ServicePage")
