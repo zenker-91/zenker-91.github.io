@@ -321,7 +321,6 @@ h4 {
 .block2 {
   display: flex;
   height: 270px;
-  width: 320px;
   position: relative;
   flex-direction: column;
   align-items: center;
@@ -491,4 +490,107 @@ input {
 
 .social_link:hover {
   opacity: 0.7;
+}
+
+.menu-btn {
+  display: none;
+}
+
+@media screen and (max-width: 440px) {
+  .header {
+    height: 70px;
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 10px;
+    top: 70px;
+    z-index: -1;
+    transition: opacity 0.2s linear;
+    opacity: 0;
+  }
+
+  .nav_active {
+    opacity: 1;
+    /* z-index: 99; */
+  }
+
+  .nav_item {
+    justify-content: flex-start;
+    padding-left: 10px;
+  }
+
+  .nav_item:hover {
+    color: #fff;
+    background-color: #373737;
+  }
+
+  .content {
+    height: 100%;
+}
+
+  .content_inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content_left {
+    width: 100%;
+  }
+
+  .article_item {
+    width: 100%;
+    height: max-content;
+    margin-right: 0;
+    margin-bottom: 20px;
+    padding: 0 20px;
+  }
+
+  .block2 {
+    width: 100%;
+  }
+  
+  .content_right {
+    align-items: center;;
+  }
+
+  .main {
+    height: 450px;
+  }
+
+  .reviews {
+    position: absolute;
+    top: 40px;
+  }
+
+  .main_item {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 100%;
+    height: auto;
+    z-index: 98;
+  }
+
+  .slider_frame {
+    width: 350px;
+    height: 520px;
+    align-self: center;
+  }
+
+  .slider_item {
+    width: 350px;
+    height: 520px;
+    flex-direction: column;
+  }
+
+  .item_text {
+    padding-top: 20px;
+  }
+
+  .socials {
+    position: unset;
+  }
 }
