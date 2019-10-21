@@ -284,6 +284,7 @@ h4 {
   display: flex;
   height: 100%;
   flex-direction: column;
+  align-items: center;
 }
 
 .block1 {
@@ -328,6 +329,7 @@ h4 {
   background-color: #86e7f0;
   color: #fff;
   text-transform: uppercase;
+  width: 100%;
 }
 
 .circle {
@@ -410,6 +412,7 @@ h4 {
   color: #fff;
   background-color: #393a39;
   padding: 24px 30px 20px 30px;
+  width: 100%;
 }
 
 .block3_title {
@@ -552,10 +555,6 @@ input {
     padding: 0 20px;
   }
 
-  .block2 {
-    width: 100%;
-  }
-  
   .content_right {
     align-items: center;;
   }
@@ -596,5 +595,79 @@ input {
 
   .socials {
     position: unset;
+  }
+}
+
+@media screen and (max-width: 820px) and (min-width: 441px) {
+  .header {
+    height: 70px;
+  }
+
+  .navigation {
+    margin-right: 20px;
+  }
+
+  .reviews {
+    width: 50%;
+    flex-direction: column;
+  }
+
+  .main {
+    height: 300px;
+  }
+
+  h1, h2 {
+    position: relative;
+    top: 40px;
+    margin-top: 15px;
+  }
+
+  .video_review {
+    top: 40px;
+    position: relative;
+    margin-top: 20px;
+  }
+
+  .main_item {
+    display: flex;
+    top: 80px;
+    width: 50%;
+    left: 50%;
+    height: auto;
+    z-index: 98;
+  }
+
+  .content_inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content_left {
+    width: 100%;
+  }
+
+  .content_right {
+    width: 100%;
+  }
+
+  .content {
+    height: unset;
+  }
+
+  .slider_frame {
+    align-self: center;
+  }
+
+  .articles_block {
+    padding-left: 20px;
+  }
+
+  .article_item {
+    width: 30%;
+    height: unset;
+  }
+
+  .socials {
+    right: 20px;
   }
 }
