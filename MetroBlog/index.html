@@ -8,10 +8,11 @@
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/btn_menu.css">
+
   <title>MetroBlog</title>
 </head>
 <body>
-<div class="header">
+<header class="header">
   <div class="container">
     <div class="header_inner">
       <div class="logo">
@@ -19,18 +20,18 @@
         <div class="circle_logo"></div>
         <span class="logo_last">Blog</span>
       </div>
-      <div class="navigation">
+      <nav class="navigation">
         <a class="nav_item" href="#">Home</a>
         <a class="nav_item" href="#">About</a>
         <a class="nav_item" href="#">Articles</a>
         <a class="nav_item" href="#">Pages</a>
-      </div>
+      </nav>
       <a class="menu-btn">
         <span class="line"></span>
       </a>
     </div>
   </div>
-</div>
+</header>
 <div class="main">
   <div class="container">
     <div class="main_inner">
@@ -81,7 +82,7 @@
           </div>
         </div>
         <div class="articles_block">
-          <div class="article_item">
+          <article class="article_item">
             <h4>Apple i phone variations</h4>
             <div class="publisher">
               <span class="date">30/12/12</span>
@@ -89,8 +90,8 @@
               <span class="publisher">Mariya</span>
             </div>
             <span class="article_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type </span>
-          </div>
-          <div class="article_item">
+          </article>
+          <article class="article_item">
               <h4>The standard chunk 
                   Lorem Ipsum</h4>
               <div class="publisher">
@@ -99,8 +100,8 @@
                 <span class="publisher">Mariya</span>
               </div>
               <span class="article_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type </span>
-          </div>
-          <div class="article_item">
+          </article>
+          <article class="article_item">
               <h4>Apple i phone variations</h4>
               <div class="publisher">
                 <span class="date">30/12/12</span>
@@ -108,8 +109,8 @@
                 <span class="publisher">Mariya</span>
               </div>
               <span class="article_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type </span>
-          </div>
-          <div class="article_item">
+          </article>
+          <article class="article_item">
               <h4>Apple i phone variations</h4>
               <div class="publisher">
                 <span class="date">30/12/12</span>
@@ -117,8 +118,8 @@
                 <span class="publisher">Mariya</span>
               </div>
               <span class="article_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type </span>
-          </div>
-          <div class="article_item">
+          </article>
+          <article class="article_item">
               <h4>The standard chunk 
                   Lorem Ipsum</h4>
               <div class="publisher">
@@ -127,7 +128,8 @@
                 <span class="publisher">Mariya</span>
               </div>
               <span class="article_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type </span>
-          </div><div class="article_item">
+          </article>
+          <article class="article_item">
               <h4>This book is one of 
                   treatise </h4>
               <div class="publisher">
@@ -136,7 +138,8 @@
                 <span class="publisher">Andriana Solorzana</span>
               </div>
               <span class="article_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type </span>
-          </div><div class="article_item">
+          </article>
+          <article class="article_item">
               <h4>The standard chunk 
                   Lorem Ipsum</h4>
               <div class="publisher">
@@ -145,7 +148,7 @@
                 <span class="publisher">Mariya</span>
               </div>
               <span class="article_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type </span>
-          </div>
+          </article>
         </div>
       </div>
       <div class="content_right">
@@ -161,15 +164,17 @@
           </div>
           <span class="block2_title">Lorem ipsum</span>
           <span class="block2_text2">Lorem ipsum is simply dummy</span>
-          <a class="block2_link" href="#">join us now!</a>
+          <form action="">
+            <button class="block2_link" type="submit">join us now!</button>
+          </form>
         </div>
-        <div class="block3">
-          <span class="block3_title">join our mailing</span>
-          <span class="block3_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum</span>
-          <input class="name" type="text" value="Name" onfocus="if (value == 'Name') {value = ''}" onblur="if (value == '') {value = 'Name'}">
-          <input class="mail" type="text" value="email address" onfocus="if (value == 'email address') {value = ''}" onblur="if (value == '') {value = 'email address'}">
-          <a class="block3_link" href="#">sign me up!</a>
-        </div>
+        <form class="form">
+          <span class="form_title">join our mailing</span>
+          <span class="form_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum</span>
+          <input class="name" name="name" type="text" value="Name" onfocus="if (value == 'Name') {value = ''}" onblur="if (value == '') {value = 'Name'}">
+          <input class="mail" name="email" type="text" value="email address" onfocus="if (value == 'email address') {value = ''}" onblur="if (value == '') {value = 'email address'}">
+          <button class="form_link" type="submit">sign me up!</button>
+        </form>
       </div>
     </div>
   </div>
