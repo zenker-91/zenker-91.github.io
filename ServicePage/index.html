@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    
-    <title>ServisePage</title>
+  <meta charset="utf-8">
+  
+  <link rel="stylesheet" href="css/fonts.css">
+
+  <link rel="stylesheet" type="text/css" href="./slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>ServisePage</title>
 
 </head>
-<body onload="resetSliders(['slider_intro_item']); initialize_counter('counter')">
+<body>
 
 <svg style="display: none;">
   <symbol id = "facebook-top" viewBox="0 0 612 612">
@@ -116,44 +121,44 @@
 </svg>
 
 <header class = "header">
-    <div class = "container">
-        <div class = "header__inner">
-            <div class="header_logo">
-              <div class="LO">LO</div>
-              <div class="GO">GO</div>
-            </div>
-            <div class="navigation">
-                <a class = "navlink"href="#">Home</a>
-                <a class = "navlink"href="#">About</a>
-                <a class = "navlink"href="#">Services</a>
-                <a class = "navlink"href="#">Portfolio</a>
-                <a class = "navlink"href="#">Shop</a>
-                <a class = "navlink"href="#">Contact</a>
-                <a class = "navlink"href="#">Pages</a>
-            </div>
-            <div class = "socials">
-              <a class="social_item" href="sociallink">
-                <svg class="social_icon">
-                  <use xlink:href="#facebook-top"></use>
-                </svg>
-              </a>
-              <a class="social_item" href="sociallink">
-                  <svg class="social_icon">
-                    <use xlink:href="#twitter-top"></use>
-                </svg>
-              </a>
-              <a class="social_item" href="sociallink">
-                  <svg class="social_icon">
-                    <use xlink:href="#google-top"></use>
-                </svg>
-              </a> 
-              
-            </div>
-        </div>
+  <div class = "container">
+    <div class = "header__inner">
+      <div class="header_logo">
+        <div class="LO">LO</div>
+        <div class="GO">GO</div>
+      </div>
+      <nav class="navigation">
+          <a class = "navlink"href="#">Home</a>
+          <a class = "navlink"href="#">About</a>
+          <a class = "navlink"href="#">Services</a>
+          <a class = "navlink"href="#">Portfolio</a>
+          <a class = "navlink"href="#">Shop</a>
+          <a class = "navlink"href="#">Contact</a>
+          <a class = "navlink"href="#">Pages</a>
+      </nav>
+      <div class = "socials">
+        <a class="social_item" href="sociallink">
+          <svg class="social_icon">
+            <use xlink:href="#facebook-top"></use>
+          </svg>
+        </a>
+        <a class="social_item" href="sociallink">
+            <svg class="social_icon">
+              <use xlink:href="#twitter-top"></use>
+          </svg>
+        </a>
+        <a class="social_item" href="sociallink">
+            <svg class="social_icon">
+              <use xlink:href="#google-top"></use>
+          </svg>
+        </a> 
+        
+      </div>
     </div>
+  </div>
 </header>
 
-<div class="intro">
+<section class="intro">
   <div class="container">
     <div class="intro_inner">
       <div class="top_slider_control">
@@ -177,11 +182,11 @@
         </div>
         <a class="intro_button" href="#">Hire us</a>
       </div>
+    </div>
   </div>
-  </div>
-</div>
+</section>
 
-<div class="about">
+<section class="about">
   <div class="container">
     <div class="about_inner">
       <div class="about_left">
@@ -201,19 +206,19 @@
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<div class="services">
+<section class="services">
 
   <div class="our_services">
-      <h1 class="our_services_text">Our Services</h1>
-      <img class="our_services_img" src="img/our services.png" alt="">
+    <h1 class="our_services_text">Our Services</h1>
+    <img class="our_services_img" src="img/our services.png" alt="">
   </div>
   <div class="container">
     <div class="services_inner_container">
       <div class="services_slider_control">
-          <a class="left_service_button" onclick="move_services_right()"><img src="img/left_arrow3.png" alt=""></a>
-          <a class="right_service_button" onclick="move_services_left()"><img src="img/right_arrow3.png" alt=""></a>
+          <a class="left_service_button"><img src="img/left_arrow3.png" alt=""></a>
+          <a class="right_service_button"><img src="img/right_arrow3.png" alt=""></a>
       </div>
       <div class="services_inner" id="services_inner">
         <div class="services_item">
@@ -235,10 +240,10 @@
             <a class="services_button" href="#">More details</a>
         </div>
         <div class="services_item">
-            <img class="services_img" src="img/Web_Dev.png" alt="">
-            <h1 class="services_titel">Web development</h1>
-            <h2 class="services_text">Some other text We provide the best world class web development service</h2>
-            <a class="services_button" href="#">More details</a>
+          <img class="services_img" src="img/Web_Dev.png" alt="">
+          <h1 class="services_titel">Web development</h1>
+          <h2 class="services_text">Some other text We provide the best world class web development service</h2>
+          <a class="services_button" href="#">More details</a>
         </div>
         <div class="services_item">
           <img class="services_img" src="img/Web_Dev.png" alt="">
@@ -249,9 +254,9 @@
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<div class="feedback">
+<section class="feedback">
   <div class="feedback_title">
     <h1 class="feedback_title_text">feedback</h1>
     <img class="our_services_img" src="img/our services.png" alt="">
@@ -269,11 +274,11 @@
         </div>
       </div>
       <div class="feedback_slider_control">
-        <a class="left" onclick="move_slider_right(); decrease_counter()"><img src="img/left_arrow2.png" alt=""></a>
+        <a class="left"><img src="img/left_arrow2.png" alt=""></a>
         <div class="feedback_counter" id="counter">
           1/10
         </div>
-        <a class="right" onclick="move_slider_left(); increase_counter()"><img src="img/right_arrow2.png" alt=""></a>
+        <a class="right"><img src="img/right_arrow2.png" alt=""></a>
       </div>
     </div>
 
@@ -287,27 +292,27 @@
       </div>
 
       <div class="feedback_item">
-          <img class="feedback_foto" src="img/feedback/model-2.png" alt="">
-          <div class="feedback_text">
-            <div class="feedback_date">01</div>
-            <div class="feedback_name">Imran Khan<br/>CEO, Vesso</div>
-          </div>
+        <img class="feedback_foto" src="img/feedback/model-2.png" alt="">
+        <div class="feedback_text">
+          <div class="feedback_date">01</div>
+          <div class="feedback_name">Imran Khan<br/>CEO, Vesso</div>
+        </div>
       </div>
 
       <div class="feedback_item">
-          <img class="feedback_foto" src="img/feedback/model-3.png" alt="">
-          <div class="feedback_text">
-            <div class="feedback_date">01</div>
-            <div class="feedback_name">Imran Khan<br/>CEO, Vesso</div>
-          </div>
+        <img class="feedback_foto" src="img/feedback/model-3.png" alt="">
+        <div class="feedback_text">
+          <div class="feedback_date">01</div>
+          <div class="feedback_name">Imran Khan<br/>CEO, Vesso</div>
+        </div>
       </div>
 
     </div>
    </div>
   </div>
-</div>
+</section>
 
-<div class="clients">
+<section class="clients">
   <div class="clients_title">
     <h1 class="clients_text">Clients</h1>
     <img class="our_services_img" src="img/clients.png" alt="">
@@ -316,35 +321,35 @@
 
     <div class="client_logos">
       <div class="client_logo_item">
-          <img class="client_logo_img" src="img/clients/Adobe.png" alt="">
+        <img class="client_logo_img" src="img/clients/Adobe.png" alt="">
       </div>
       <div class="client_logo_item">
-          <img class="client_logo_img" src="img/clients/hcl.png" alt="">
+        <img class="client_logo_img" src="img/clients/hcl.png" alt="">
       </div>
       <div class="client_logo_item">
-          <img class="client_logo_img" src="img/clients/infosys.png" alt="">
+        <img class="client_logo_img" src="img/clients/infosys.png" alt="">
       </div>
       <div class="client_logo_item">
-          <img class="client_logo_img" src="img/clients/invision.png" alt="">
+        <img class="client_logo_img" src="img/clients/invision.png" alt="">
       </div>
       <div class="client_logo_item">
-          <img class="client_logo_img" src="img/clients/cisco.png" alt="">
+        <img class="client_logo_img" src="img/clients/cisco.png" alt="">
       </div>
       <div class="client_logo_item">
-          <img class="client_logo_img" src="img/clients/be.png" alt="">
+        <img class="client_logo_img" src="img/clients/be.png" alt="">
       </div>
       <div class="client_logo_item">
-          <img class="client_logo_img" src="img/clients/Canva.png" alt="">
+        <img class="client_logo_img" src="img/clients/Canva.png" alt="">
       </div>
       <div class="client_logo_item">
-          <img class="client_logo_img" src="img/clients/instagram.png" alt="">
+        <img class="client_logo_img" src="img/clients/instagram.png" alt="">
       </div>
     </div>
 
   </div>
-</div>
+</section>
 
-<div class="quote">
+<section class="quote">
   <div class="container">
     <div class="quote_inner">
       <div class="quote_text">
@@ -355,18 +360,18 @@
 
       <div class="quote_subscribe">
         
-        <div class="subscribe">
-          <input class="input_form" type="your_name" value="Your name" onfocus="if (value == 'Your name') {value = ''}" onblur="if (value == '') {value = 'Your name'}">
-          <input class="input_form" type="your_number" value="Your number" onfocus="if (value == 'Your number') {value = ''}" onblur="if (value == '') {value = 'Your number'}">
-          <a class="get_call" href="#">Get a call</a>
-        </div>
+        <form class="subscribe">
+          <input class="input_form" type="text" name="name" value="Your name" onfocus="if (value == 'Your name') {value = ''}" onblur="if (value == '') {value = 'Your name'}">
+          <input class="input_form" type="text" name="number" value="Your number" onfocus="if (value == 'Your number') {value = ''}" onblur="if (value == '') {value = 'Your number'}">
+          <button type="submit" class="get_call">Get a call</button>
+        </form>
     
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<div class="footer">
+<footer class="footer">
   <div class="container">
     <div class="footer_inner">
       <div class="content">
@@ -397,51 +402,105 @@
       </div>
 
       <div class="social">
-        <div class="mail_subscribe">
-            <input class="input_mail" type="your_mail" value="Your email" onfocus="if (value == 'Your email') {value = ''}" onblur="if (value == '') {value = 'Your email'}">
-            <a class="subscribe_field" href="#">Subscribe</a>
-        </div>
+        <form class="mail_subscribe">
+          <input class="input_mail" name="mail_subscribe" type="text" value="Your email" onfocus="if (value == 'Your email') {value = ''}" onblur="if (value == '') {value = 'Your email'}">
+          <button type="submit" class="subscribe_field" >Subscribe</button>
+        </form>
         <div class="socials_footer">
-            <a class="social_item_footer" href="sociallink">
-                <svg class="social_icon_footer">
-                  <use xlink:href="#facebook"></use>
-                </svg>
-            </a>
-            <a class="social_item_footer" href="sociallink">
-                <svg class="social_icon_footer">
-                  <use xlink:href="#twitter"></use>
-                </svg>
-            </a>
-            <a class="social_item_footer" href="sociallink">
-                <svg class="social_icon_footer">
-                  <use xlink:href="#google"></use>
-                </svg>
-            </a>
-            <a class="social_item_footer" href="sociallink">
-                <svg class="social_icon_footer">
-                  <use xlink:href="#dribble"></use>
-                </svg>
-            </a>
-            <a class="social_item_footer" href="sociallink">
-                <svg class="social_icon_footer">
-                  <use xlink:href="#behance"></use>
-                </svg>
-            </a>
-            <a class="social_item_footer" href="sociallink">
-                <svg class="social_icon_footer">
-                  <use xlink:href="#instagram"></use>
-                </svg>
-            </a>
+          <a class="social_item_footer" href="sociallink">
+            <svg class="social_icon_footer">
+              <use xlink:href="#facebook"></use>
+            </svg>
+          </a>
+          <a class="social_item_footer" href="sociallink">
+            <svg class="social_icon_footer">
+              <use xlink:href="#twitter"></use>
+            </svg>
+          </a>
+          <a class="social_item_footer" href="sociallink">
+            <svg class="social_icon_footer">
+              <use xlink:href="#google"></use>
+            </svg>
+          </a>
+          <a class="social_item_footer" href="sociallink">
+            <svg class="social_icon_footer">
+              <use xlink:href="#dribble"></use>
+            </svg>
+          </a>
+          <a class="social_item_footer" href="sociallink">
+            <svg class="social_icon_footer">
+              <use xlink:href="#behance"></use>
+            </svg>
+          </a>
+          <a class="social_item_footer" href="sociallink">
+            <svg class="social_icon_footer">
+              <use xlink:href="#instagram"></use>
+            </svg>
+          </a>
         </div>
       </div>
     </div>
   </div>
-</div>
+</footer>
 
 <!-- javascript ======================= -->
 
-<script src="js/app.js"></script>
+<!-- slick ================ -->
 
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+  <script src="slick/slick.js" type="text/javascript" charset="utf-8"></script>
+  
+  <script>
+  $(document).on('ready', function() {
+    $(".services_inner").slick({
+      infinite: false,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      nextArrow: $('.right_service_button'),
+      prevArrow: $('.left_service_button')
+    });
+    $('.slider_intro_container').slick({
+      // dots: true,
+      infinite: true,
+      speed: 500,
+      fade: true,
+      cssEase: 'linear',
+      nextArrow: $('.next'),
+      prevArrow: $('.prev')
+    });
+
+    const $slider = $('.feedback_slider');
+ 
+    if ($slider.length) {
+      let currentSlide;
+      let slidesCount;
+      let sliderCounter = document.getElementById('counter');
+      
+      const updateSliderCounter = function(slick, currentIndex) {
+        currentSlide = slick.slickCurrentSlide() + 1;
+        slidesCount = slick.slideCount;
+        $(sliderCounter).text(currentSlide + '/' +slidesCount)
+      };
+
+      $slider.on('init', function(event, slick) {
+        updateSliderCounter(slick);
+      });
+
+      $slider.on('afterChange', function(event, slick, currentSlide) {
+        updateSliderCounter(slick, currentSlide);
+      });
+
+      $slider.slick({
+      infinite: true,
+      speed: 500,
+      cssEase: 'linear',
+      nextArrow: $('.right'),
+      prevArrow: $('.left')
+      });
+    }
+
+  })
+  </script>
 
 </body>
 </html>
